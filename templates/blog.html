@@ -8,14 +8,14 @@
     </head>
     <body>
         <header>
-            <h1>Titolo del blog</h1>
-            <aside class="navigation_bar">
-                <ul>
-                    <a href="/"><li>Home</li></a>
-                    <a href="/new_post"><li>Aggiungi Post</li></a>
-                </ul>
-            </aside>
+            <p>Titolo del blog</p>
         </header>
+        <aside class="navigation_bar">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="/new_post"><li>Aggiungi Post</li></a>
+            </ul>
+        </aside>
         <main>
             {% for p in post %}
                 <section class="Post">
