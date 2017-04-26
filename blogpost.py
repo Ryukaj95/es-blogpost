@@ -18,4 +18,4 @@ class Post(p.Model):
 
 @app.route('/')
 def home():
-    return render_template('blog.html', post = Post.select())
+    return render_template('blog.html', post=Post.select())
