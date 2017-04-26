@@ -4,8 +4,8 @@ import peewee as p
 
 app = Flask(__name__)
 db = p.SqliteDatabase('posts.db')
-
 class Post(p.Model):
+
     id = p.IntegerField()
     title = p.CharField()
     content = p.CharField()
@@ -15,9 +15,7 @@ class Post(p.Model):
         database = db
         db_table="posts"
 
+
 @app.route('/')
 def home():
-    return render_template('blog.html')
-
-# for f in Film.select():
-#     print ("{} {} {} {}\n".format(f.id,f.title,f.content,f.data))
+    return render_template('blog.html', post = Post.select())
