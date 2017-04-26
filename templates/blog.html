@@ -17,6 +17,19 @@
             </aside>
         </header>
         <main>
+            {% for p in post %}
+                <section class="Post">
+                    <header>
+                        {{ p.title }}
+                    </header>
+                    <article class="Contenuto">
+                        {{ p.content }}
+                    </article>
+                    <footer>
+                        {{ p.data }}
+                    </footer>
+                </section>
+            {% endfor %}
         </main>
     </body>
 </html>
