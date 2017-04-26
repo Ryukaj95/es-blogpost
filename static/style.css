@@ -11,8 +11,12 @@ header {
 }
 
 aside {
-    position:absolute;
     align-self: flex-end;
+    position: fixed;
+    background-color: white;
+    padding: 0.5em;
+    border-width: thin;
+    border-style: solid;
 }
 
 main {
@@ -26,9 +30,10 @@ main {
 }
 
 .Post {
-    margin: 5em 0;
+    margin: 5em 1em;
     flex-grow: 25;
-    width: calc(50% - 4em);
+    width: calc(50% - 6em);
+    max-width: calc(50% - 6em);
     border-right-width: thin;
     border-bottom-width: thin;
     border-right-style: dotted;
