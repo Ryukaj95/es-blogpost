@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+}
+
+header {
+    align-self: center;
+}
+
+aside {
+    position:absolute;
+    align-self: flex-end;
+}
+
+main {
+    border-bottom-width: medium;
+    border-bottom-style: double;
+    border-top-width: medium;
+    border-top-style: double;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Post {
+    margin: 5em 0;
+    flex-grow: 25;
+    width: calc(50% - 4em);
+    border-right-width: thin;
+    border-bottom-width: thin;
+    border-right-style: dotted;
+    border-bottom-style: dotted;
+}
