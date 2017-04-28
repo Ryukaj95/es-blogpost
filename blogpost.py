@@ -46,7 +46,9 @@ def new_post():
 
 class NewPost(Resource):
     def post(self):
-        print("ciao")
+        data = request.get_json()
+        insert_post_into_database(data[
+            'title'], data['date'], data['content'])
 
 
 api.add_resource(NewPost, '/home')
