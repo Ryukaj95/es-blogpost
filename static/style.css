@@ -6,8 +6,14 @@ body {
     margin-top: 1em;
 }
 
-header {
-    align-self: center;
+header{
+    text-align: center;
+}
+
+main > header {
+    font-size: 3em;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 aside {
@@ -28,29 +34,45 @@ main {
     margin-right: 7em;
 }
 
-header p {
+header h1 {
     text-align: center;
 }
 
-.Post footer {
+.Posts p {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.65em;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    padding: 0.5em 0;
+
 }
 
 .Posts {
-    border-bottom-width: medium;
-    border-bottom-style: double;
-    border-top-width: medium;
-    border-top-style: double;
+    border-left-width: medium;
+    border-left-style: double;
+    border-right-width: medium;
+    border-right-style: double;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .Post {
+    padding: 0.5em;
     margin: 1.5em 1em;
-    width: calc(50% - 2.5em);
-    max-width: calc(50% - 2.5em);
-    border-right-width: thin;
-    border-bottom-width: thin;
-    border-right-style: dotted;
-    border-bottom-style: dotted;
+    width: calc(50% - 3.5em);
+    max-width: calc(50% - 3.5em);
+    border-width: thin;
+    border-style: dotted;
+    display: flex;
+    flex-direction: column;
+}
+
+.Contenuto {
+    padding: 0.5em;
+}
+
+.Post header, .Post p {
+    background-color: #39de35;
 }
