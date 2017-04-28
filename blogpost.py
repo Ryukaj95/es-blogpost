@@ -4,6 +4,8 @@ import peewee as p
 
 app = Flask(__name__)
 db = p.SqliteDatabase('posts.db')
+
+
 class Post(p.Model):
 
     id = p.IntegerField()
@@ -13,12 +15,13 @@ class Post(p.Model):
 
     class Meta:
         database = db
-        db_table="posts"
+        db_table = "posts"
 
 
 @app.route('/')
 def home():
     return render_template('blog.html', post=Post.select())
+
 
 @app.route('/new_post')
 def new_post():
