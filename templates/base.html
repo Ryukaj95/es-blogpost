@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/reset.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <title></title>
+    </head>
+    <body>
+        <aside class="navigation_bar">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="/new_post"><li>Aggiungi Post</li></a>
+            </ul>
+        </aside>
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+    </body>
+</html>
