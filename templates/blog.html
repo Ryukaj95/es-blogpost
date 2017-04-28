@@ -7,9 +7,6 @@
         <title></title>
     </head>
     <body>
-        <header>
-            <p>Titolo del blog</p>
-        </header>
         <aside class="navigation_bar">
             <ul>
                 <a href="/"><li>Home</li></a>
@@ -17,19 +14,24 @@
             </ul>
         </aside>
         <main>
-            {% for p in post %}
-                <section class="Post">
-                    <header>
-                        {{ p.title }}
-                    </header>
-                    <article class="Contenuto">
-                        {{ p.content }}
-                    </article>
-                    <footer>
-                        {{ p.data }}
-                    </footer>
-                </section>
-            {% endfor %}
+            <header>
+                <p>Titolo del blog</p>
+            </header>
+            <section class="Posts">
+                {% for p in post %}
+                    <section class="Post">
+                        <header>
+                            <p>{{ p.title }}</p>
+                        </header>
+                        <article class="Contenuto">
+                            {{ p.content }}
+                        </article>
+                        <footer>
+                            {{ p.data }}
+                        </footer>
+                    </section>
+                {% endfor %}
+            </section>
         </main>
     </body>
 </html>
