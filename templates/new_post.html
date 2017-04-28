@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block main %}
-    <form class="" action="/submit" method="post">
+    <form id="form_post_id" class="form_post" action="/submit" method="post" autocomplete="off">
         <section id="titolo">
             <p>Titolo del post</p>
             <input type="text" name="title" required>
@@ -8,10 +8,10 @@
         <section>
             <p>Data del post</p>
             <input type="text" name="date" required>
-        </section id="contenuto">
-        <section>
+        </section>
+        <section id="contenuto">
             <p>Contenuto del post</p>
-            <input type="text" name="content" required>
+            <textarea name="content" rows="18" cols="80" form="form_post_id" required></textarea>
         </section>
         <input type="submit" value="Invia">
     </form>
