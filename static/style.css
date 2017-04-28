@@ -76,3 +76,35 @@ header h1 {
 .Post header, .Post p {
     background-color: #39de35;
 }
+
+.form_post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.form_post #titolo input {
+    width: 20em;
+}
+
+.form_post #data input {
+    width: 10em;
+}
+
+.form_post #contenuto input {
+    width: 50em;
+    height: 30em;
+    resize: none;
+}
+
+.form_post section p {
+    margin: 1.5em 0 0.5em 0;
+}
+
+.form_post > input:last-child {
+    width: 6em;
+    height: 3em;
+    margin-top: 3em;
+
+}
