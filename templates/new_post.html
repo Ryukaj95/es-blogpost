@@ -1,1 +1,18 @@
 {% extends 'base.html' %}
+{% block main %}
+    <form class="" action="/submit" method="post">
+        <section id="titolo">
+            <p>Titolo del post</p>
+            <input type="text" name="title" required>
+        </section id="data">
+        <section>
+            <p>Data del post</p>
+            <input type="text" name="date" required>
+        </section id="contenuto">
+        <section>
+            <p>Contenuto del post</p>
+            <input type="text" name="content" required>
+        </section>
+        <input type="submit" value="Invia">
+    </form>
+{% endblock %}
