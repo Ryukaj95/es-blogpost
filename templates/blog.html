@@ -1,35 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/static/reset.css">
-        <link rel="stylesheet" href="/static/style.css">
-        <title></title>
-    </head>
-    <body>
-        <aside class="navigation_bar">
-            <ul>
-                <a href="/"><li>Home</li></a>
-                <a href="/new_post"><li>Aggiungi Post</li></a>
-            </ul>
-        </aside>
-        <main>
+{% extends 'base.html'%}
+{% block main %}
+<header>
+    <p>Titolo del blog</p>
+</header>
+<section class="Posts">
+    {% for p in post %}
+        <section class="Post">
             <header>
-                <p>Titolo del blog</p>
+                <h1>{{ p.title }}</h1>
             </header>
-            <section class="Posts">
-                {% for p in post %}
-                    <section class="Post">
-                        <header>
-                            <h1>{{ p.title }}</h1>
-                        </header>
-                        <p> {{ p.data }}</p>
-                        <article class="Contenuto">
-                            {{ p.content }}
-                        </article>
-                    </section>
-                {% endfor %}
-            </section>
-        </main>
-    </body>
-</html>
+            <p> {{ p.data }}</p>
+            <article class="Contenuto">
+                {{ p.content }}
+            </article>
+        </section>
+    {% endfor %}
+</section>
+{% endblock %}
